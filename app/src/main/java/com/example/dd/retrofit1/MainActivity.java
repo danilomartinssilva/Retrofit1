@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private void getUserList() {
         Log.d("123", "getUserList");
         try {
-            String url = "https://data.egov.kz/";
-            Log.d("123", "https://data.egov.kz/");
+            String url = "http://shaoniiuc.com/";
+            Log.d("123", "http://shaoniiuc.com/");
 
             Retrofit retrofit = null;
             Log.d("123", "retrofit");

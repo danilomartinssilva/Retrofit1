@@ -12,7 +12,7 @@ import retrofit2.http.GET;
  */
 
 public interface APIService {
-    @GET("api/v2/kazakstan_respublikasy_ishki_i7/v4")
+    @GET("json_bangla")
 
     Call<List<User>> getUserData();
 
