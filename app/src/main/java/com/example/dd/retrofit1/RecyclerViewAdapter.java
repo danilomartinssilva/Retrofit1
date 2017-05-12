@@ -37,9 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         Log.d("123", "onBindViewHolder");
         holder.name.setText(item.get(position).getName());
-        holder.id.setText(item.get(position).getId());
-        holder.kolichestvo_vakansii.setText(item.get(position).getKolichestvo_vakansii());
-        holder.kategoriia_personala.setText(item.get(position).getKategoriia_personala());
+        holder.hobby.setText(item.get(position).getHobby());
     }
 
     @Override
@@ -49,16 +47,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView name, id,kategoriia_personala,kolichestvo_vakansii;
+        public TextView name, hobby;
 
         public ViewHolder(View itemView) {
             super(itemView);
             Log.d("123", "ViewHolder");
 
             name = (TextView) itemView.findViewById(R.id.name);
-            kolichestvo_vakansii = (TextView) itemView.findViewById(R.id.kolichestvo_vakansii);
-            kategoriia_personala = (TextView) itemView.findViewById(R.id.kategoriia_personala);
-            id = (TextView) itemView.findViewById(R.id.id);
+            hobby = (TextView) itemView.findViewById(R.id.hobby);
 
 //            itemView.setOnClickListener(new View.OnClickListener() {
 //                @Override

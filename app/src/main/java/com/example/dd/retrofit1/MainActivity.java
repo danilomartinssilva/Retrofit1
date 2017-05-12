@@ -17,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private LinearLayoutManager layoutManager;
+    List<User> userList =null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     //Log.d("onResponse", response.message());
                     Log.d("123", "onResponse");
 
-                    List<User> userList = response.body();
+                    userList = response.body();
                     Log.d("123", "List<User> userList = response.body();");
 
                     RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
