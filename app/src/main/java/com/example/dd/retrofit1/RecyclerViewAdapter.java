@@ -10,24 +10,21 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by dd on 03.05.2017.
- */
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private List<User> item;
-    Context context ;
+    private Context context ;
 
     public RecyclerViewAdapter(Context context, List<User> item ) {
-        Log.d("123", "RecyclerViewAdapter");
+        Log.i("autolog", "RecyclerViewAdapter");
         this.item = item;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.d("123", "onCreateViewHolder");
+        Log.i("autolog", "onCreateViewHolder");
         View view = LayoutInflater.from(context).inflate(R.layout.recycler_view_row, null);
 
         return new ViewHolder(view);
@@ -35,14 +32,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Log.d("123", "onBindViewHolder");
+        Log.i("autolog", "onBindViewHolder");
         holder.name.setText(item.get(position).getName());
         holder.hobby.setText(item.get(position).getHobby());
     }
 
     @Override
     public int getItemCount() {
-        Log.d("123", "getItemCount");
+        Log.i("autolog", "getItemCount");
         return item.size();
     }
 
@@ -51,7 +48,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public ViewHolder(View itemView) {
             super(itemView);
-            Log.d("123", "ViewHolder");
+            Log.i("autolog", "ViewHolder");
 
             name = (TextView) itemView.findViewById(R.id.name);
             hobby = (TextView) itemView.findViewById(R.id.hobby);
@@ -63,7 +60,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //                }
 //            });
         }
-
-
     }
 }
